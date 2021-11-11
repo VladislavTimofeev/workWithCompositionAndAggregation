@@ -1,16 +1,39 @@
 package com.company.task3;
 
+import java.util.Arrays;
+
 public class District {
 
-    private City[] city;
+    private City[] cities;
 
     private String name;
-    private int square;
-    private int population;
 
-    public District(String name, int square, int population) {
+    public District(City[] cities, String name) {
+        this.cities = cities;
         this.name = name;
-        this.square = square;
-        this.population = population;
+    }
+
+    public City[] getCities() {
+        return cities;
+    }
+
+    public void setCities(City[] cities) {
+        this.cities = cities;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "District{" +
+                "city=" + Arrays.toString(cities) +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

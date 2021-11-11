@@ -1,20 +1,54 @@
 package com.company.task3;
 
+import java.util.Arrays;
+
 public class Region {
 
-    private District[] district;
-
+    private District[] districts;
     private String name;
-    private int count;
-    private int square;
-    private int population;
     private String regionalCenters;
 
-    public Region(String name, int count, int square, int population, String regionalCenters) {
+    public Region(District[] districts, String name, String regionalCenters) {
+        this.districts = districts;
         this.name = name;
-        this.count = count;
-        this.square = square;
-        this.population = population;
         this.regionalCenters = regionalCenters;
+    }
+
+    public District[] getDistricts() {
+        return districts;
+    }
+
+    public void setDistricts(District[] districts) {
+        this.districts = districts;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getRegionalCenters() {
+        return regionalCenters;
+    }
+
+    public void setRegionalCenters(String regionalCenters) {
+        this.regionalCenters = regionalCenters;
+    }
+
+    public String getRegionsCount(){
+        return regionalCenters;
+    }
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "district=" + Arrays.toString(districts) +
+                ", name='" + name + '\'' +
+                ", regionalCenters='" + regionalCenters + '\'' +
+                '}';
     }
 }

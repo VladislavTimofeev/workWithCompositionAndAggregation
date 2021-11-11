@@ -3,17 +3,30 @@ package com.company.task3;
 public class City {
 
     private String name;
-    private int square;
-    private int population;
-    private int zone;
     private boolean isCapital;
 
-    public City(String name, int square, int population, int zone) {
+    public City(String name, boolean isCapital) {
         this.name = name;
-        this.square = square;
-        this.population = population;
-        this.zone = zone;
+        this.isCapital = isCapital;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isCapital() {
+        return isCapital;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "name='" + name + '\'' +
+                ", isCapital=" + isCapital +
+                '}';
+    }
 }
